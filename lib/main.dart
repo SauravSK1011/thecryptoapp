@@ -1,5 +1,6 @@
 import 'package:cryptoapp/login.dart';
 import 'package:cryptoapp/register.dart';
+import 'package:cryptoapp/screens/currency_details_screen/components/wallet.dart';
 import 'package:cryptoapp/screens/home_screen/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,8 +22,6 @@ void main() async {
 
 class CryptoApp extends StatefulWidget {
   CryptoApp({super.key});
- 
-
 
   @override
   State<CryptoApp> createState() => _CryptoAppState();
@@ -31,25 +30,27 @@ class CryptoApp extends StatefulWidget {
 class _CryptoAppState extends State<CryptoApp> {
   @override
   void initState() {
-cheak();    super.initState();
+    cheak();
+    super.initState();
   }
-   bool isLogin = false;
+
+  bool isLogin = false;
   cheak() async {
-      FirebaseAuth auth = FirebaseAuth.instance;
+    FirebaseAuth auth = FirebaseAuth.instance;
 
     auth.authStateChanges().listen((User? user) {
       if (user != null && mounted) {
-setState(() {
-  isLogin=true;
-});
-
+        setState(() {
+          isLogin = true;
+        });
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: isLogin? HomeScreen():MyLogin(),
+      home: isLogin ? HomeScreen() : MyLogin(),
     );
   }
 }

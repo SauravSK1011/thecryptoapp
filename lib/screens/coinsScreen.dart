@@ -53,7 +53,7 @@ class _AllCoinsScreenState extends State<AllCoinsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(),
       body: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.vertical,

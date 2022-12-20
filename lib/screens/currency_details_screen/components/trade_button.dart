@@ -92,6 +92,7 @@ class TradeButton extends StatelessWidget {
                       'uid': uid
                     };
                     await docs.add(json);
+                    
                   },
                 ),
               ),

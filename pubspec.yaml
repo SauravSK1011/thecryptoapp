@@ -43,6 +43,9 @@ dependencies:
   font_awesome_flutter: ^10.2.1
   fl_chart: ^0.55.2
   http: ^0.13.5
+  web3dart:
+  velocity_x: ^3.6.0
+
 
 
 dev_dependencies:
