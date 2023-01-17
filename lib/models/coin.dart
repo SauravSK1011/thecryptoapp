@@ -12,8 +12,8 @@ class Coin {
     required this.change,
     required this.changePercentage,
   });
-  double high_24h;
-  double low_24h;
+  var high_24h;
+  var low_24h;
   int market_cap;
   int market_cap_rank;
   String id;

@@ -1,5 +1,6 @@
 import 'package:cryptoapp/login.dart';
 import 'package:cryptoapp/register.dart';
+import 'package:cryptoapp/screens/coinsScreen.dart';
 import 'package:cryptoapp/screens/currency_details_screen/components/wallet.dart';
 import 'package:cryptoapp/screens/home_screen/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -50,7 +51,7 @@ class _CryptoAppState extends State<CryptoApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: isLogin ? HomeScreen() : MyLogin(),
+      home: isLogin ? AllCoinsScreen() : MyLogin(),
     );
   }
 }

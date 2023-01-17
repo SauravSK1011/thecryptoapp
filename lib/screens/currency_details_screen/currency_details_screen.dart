@@ -340,14 +340,14 @@ class _CurrencyDetailsScreenState extends State<CurrencyDetailsScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:  [
-                      TradeButton(tradeDirection: TradeDirection.sell,currency:widget.currency),
-                      TradeButton(tradeDirection: TradeDirection.buy,currency:widget.currency),
+                      TradeButton(tradeDirection: TradeDirection.sell,currency:widget.currency,transactionsType: "sell",),
+                      TradeButton(tradeDirection: TradeDirection.buy,currency:widget.currency,transactionsType: "Buy"),
                     ],
                   ),
                 ),
               ],
             ),
           )
-        : CircularProgressIndicator();
+        : Center(child: CircularProgressIndicator());
   }
 }

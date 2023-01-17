@@ -2,8 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:cryptoapp/models/coin.dart';
+import 'package:cryptoapp/screens/currency_details_screen/components/wallet.dart';
 import 'package:cryptoapp/screens/currency_details_screen/currency_details_screen.dart';
 import 'package:cryptoapp/screens/home_screen/components/coin_card_design.dart';
+import 'package:cryptoapp/screens/transaction-history.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -31,12 +33,10 @@ class _AllCoinsScreenState extends State<AllCoinsScreen> {
             Map<String, dynamic> map = values[i];
             coinList.add(Coin.fromJson(map));
           }
-          
         }
         setState(() {
           coinList;
         });
-        
       }
       return coinList;
     } else {
@@ -53,7 +53,27 @@ class _AllCoinsScreenState extends State<AllCoinsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(),
+    return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.transparent,
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => WalletPage()),
+                );
+              },
+              icon: Icon(Icons.wallet)),
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => Transaction_history()),
+                );
+              },
+              icon: Icon(Icons.history)),
+              
+        ],
+        
+      ),
       body: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.vertical,

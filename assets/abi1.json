@@ -1,0 +1,119 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "int256",
+				"name": "_currency_price",
+				"type": "int256"
+			},
+			{
+				"internalType": "string",
+				"name": "_currency_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_uid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_transactionsType",
+				"type": "string"
+			},
+			{
+				"internalType": "int256",
+				"name": "_currency_quantity",
+				"type": "int256"
+			}
+		],
+		"name": "addtransactions",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "data",
+		"outputs": [
+			{
+				"internalType": "int256",
+				"name": "currency_price",
+				"type": "int256"
+			},
+			{
+				"internalType": "string",
+				"name": "currency_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "uid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "transactionsType",
+				"type": "string"
+			},
+			{
+				"internalType": "int256",
+				"name": "currency_quantity",
+				"type": "int256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "gettransactions",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "int256",
+						"name": "currency_price",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "currency_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "uid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "transactionsType",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "currency_quantity",
+						"type": "int256"
+					}
+				],
+				"internalType": "struct transactions.transactionsdetail[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
